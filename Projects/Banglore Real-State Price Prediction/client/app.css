@@ -1,0 +1,195 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #555;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content-section {
+    display: none;
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.content-section.active {
+    display: flex; /* Ensure flex display is used */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Ensure text is centered */
+}
+
+/* Home Section Styling */
+.home-section {
+    background-image: url('./util/17071046595809Bangalores-Real-Estate-Dynamics-in-2024.jpg'); /* Replace 'your-image.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    backdrop-filter: blur(5px); /* Apply blur to the background image */
+    z-index: 1;
+}
+
+.home-content {
+    position: relative;
+    z-index: 2; /* Ensure the content is above the blur */
+    display: flex;
+    flex-direction: row; /* Align heading and description side by side */
+    justify-content: space-between;
+    width: 80%;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.home-heading {
+    flex: 1;
+    margin-right: 20px;
+    text-align: left; /* Ensure the text is aligned to the left */
+}
+
+.home-heading h2 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.home-description {
+    flex: 1;
+    text-align: center; /* Ensure the text is aligned to the right */
+}
+
+.home-description p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+/* About Section (Form) Styling */
+.about-section {
+    background-color: #fff;
+    color: #333;
+    display: flex; /* Ensure consistent display with the Home section */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensure the form takes full width */
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    text-align: left; /* Consistent alignment with home section */
+}
+
+input[type="text"], select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.switch-field {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.switch-field input[type="radio"] {
+    display: none;
+}
+
+.switch-field label {
+    background-color: #e4e4e4;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.switch-field input[type="radio"]:checked + label {
+    background-color: #333;
+    color: #fff;
+}
+
+.submit {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.submit:hover {
+    background-color: #555;
+}
+
+.result h2 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
